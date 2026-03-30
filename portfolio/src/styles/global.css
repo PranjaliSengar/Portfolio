@@ -3,3 +3,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes float-slow {
+  0%   { transform: translateY(0px) scale(1); }
+  50%  { transform: translateY(-20px) scale(1.05); }
+  100% { transform: translateY(0px) scale(1); }
+}
+
+@keyframes float-medium {
+  0%   { transform: translateY(0px) scale(1); }
+  50%  { transform: translateY(-14px) scale(1.03); }
+  100% { transform: translateY(0px) scale(1); }
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  background: radial-gradient(circle, rgba(47, 57, 67, 0.1) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: left 0.08s linear, top 0.08s linear;
+}
+.bubble-slow   { animation: float-slow 6s ease-in-out infinite; }
+.bubble-medium { animation: float-medium 4s ease-in-out infinite; }
+.bubble-fast   { animation: float-fast 3s ease-in-out infinite; }
