@@ -16,7 +16,7 @@ function Projects() {
       github: 'https://github.com/your-username/empowerlocal',
       live: null,
       status: 'In Progress',
-      image: '/public/empower.png',
+      image: '/empower.png',
     },
     {
       name: 'Portfolio Website',
@@ -25,7 +25,7 @@ function Projects() {
       github: 'https://github.com/PranjaliSengar/Portfolio',
       live: 'https://pranjali-sengar.vercel.app',
       status: 'Live',
-      image: '/public/portfolio.jpg',
+      image: '/portfolio.jpg',
     },
     {
       name: 'Many more coming soon!',
