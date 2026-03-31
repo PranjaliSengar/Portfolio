@@ -115,7 +115,7 @@ function Hero() {
 
           <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-sage-dark/50 z-10">
             <img
-              src="/src/assets/logo-pic.jpg"
+              src="/public/logo-pic.jpg"
               alt="Pranjali Sengar"
               className="w-full h-full object-cover"
             />
