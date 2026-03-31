@@ -39,13 +39,13 @@ function Projects() {
   ]
 
   return (
-    <section className="pt-12 pb-16 px-10" id="projects">
+    <section className="py-8 md:py-10 lg:py-10 px-6 md:px-10 bg-bg-primary" id="projects">
       <div className="max-w-5xl mx-auto">
 
         <p className="font-inter text-xs text-sage tracking-widest uppercase mb-3">
           Projects
         </p>
-        <h2 className="font-playfair text-4xl font-normal mb-12">
+        <h2 className="font-playfair text-3xl md:text-4xl font-normal mb-8 md:mb-12">
           Things I've <span className="italic text-sage-dark">built</span>
         </h2>
 
@@ -67,7 +67,7 @@ function Projects() {
             {projects.map((project) => (
               <div
                 key={project.name}
-                className="card card-glow snap-start flex-shrink-0 w-[420px] flex flex-col"
+                className="card card-glow snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[420px] flex flex-col"
               >
                 {/* image area */}
                 <div className="w-full h-48 rounded-xl mb-4 overflow-hidden bg-bg-secondary flex items-center justify-center relative">
@@ -79,7 +79,7 @@ function Projects() {
                       <span className="font-inter text-xs text-text-light">Screenshot coming soon</span>
                     </div>
                   )}
-                  <span className="absolute top-3 right-3 font-inter text-xs px-3 py-1 rounded-full bg-gold/10 text-gold border border-gold/20">
+                  <span className="hidden md:block absolute top-3 right-3 font-inter text-xs px-3 py-1 rounded-full bg-gold/10 text-gold border border-gold/20">
                     {project.status}
                   </span>
                 </div>

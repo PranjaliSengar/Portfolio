@@ -56,47 +56,50 @@ function Hero() {
   return (
     <>
       <div id="cursor-glow" className="cursor-glow" />
-      <section className="grid grid-cols-2 h-screen">
-        <div className="flex flex-col pt-20 min-h-screen px-14 gap-4 bg-bg-primary">
-          <p className="font-inter text-xs text-sage tracking-widest uppercase">
+      <section className="grid grid-cols-1 md:grid-cols-2 min-h-[75vh] md:min-h-[90vh] lg:min-h-screen">
+        <div className="flex flex-col py-8 md:py-12 lg:py-16 px-6 md:px-14 gap-4 bg-bg-primary">
+          <p className="font-inter text-[10px] md:text-xs text-sage tracking-widest uppercase">
             — Based in Bangalore, India —
           </p>
 
-          <h1 className="font-playfair text-5xl text-text-primary leading-snug font-normal">
+          <h1 className="font-playfair text-3xl md:text-5xl  text-text-primary leading-snug font-normal">
             Hi, I'm <br/>
-            <span className="italic text-sage-dark text-6xl">Pranjali Sengar</span>
+            <span className="italic text-sage-darktext-4xl md:text-6xl">Pranjali Sengar</span>
           </h1>
 
-          <div className="flex items-center gap-3 font-inter text-sm text-text-muted">
+          <div className="flex items-center gap-3 font-inter text-xs md:text-sm text-text-muted">
             <span>Frontend Developer</span>
             <span className="w-1 h-1 rounded-full bg-gold"/>
             <span>Angular Specialist</span>
             <span className="w-1 h-1 rounded-full bg-gold"/>
             <span>React Developer</span>
           </div>
-          <p className="font-playfair italic text-gold font-semibold text-sm min-h-[10px]">
+          <p className="font-playfair italic text-gold font-semibold text-xs md:text-sm min-h-[10px]">
             {displayText}
             <span className="animate-pulse">|</span>
           </p>
-          <p className="font-inter text-sm text-text-muted leading-relaxed max-w-md">
+          <p className="font-inter text-xs md:text-sm text-text-muted leading-relaxed max-w-md">
           Frontend developer with 2+ years of experience crafting clean, scalable interfaces in Banking & FinTech at TCS. I care about the craft, not just making things work, but making them feel right. Looking to contribute to impactful, user-focused products.</p>
 
-          <div className="flex items-center gap-2 w-fit px-4 py-2 rounded-full border border-sage/30 bg-sage/10 font-inter text-xs text-sage-dark">
+          <div className="flex items-center gap-2 w-fit px-3 py-1.5 md:px-4 md:py-2  rounded-full border border-sage/30 bg-sage/10 font-inter text-xs text-sage-dark">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"/>
             Open to Work
           </div>
 
-          <div className="flex gap-4">
-            <button className="bg-sage-dark text-white font-inter text-sm px-6 py-2 rounded-full hover:bg-sage transition-all duration-300">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <button className="bg-sage-dark text-white font-inter text-sm px-6 py-2 rounded-full hover:bg-sage transition-all duration-300" onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}>
               See Projects
             </button>
-            <button className="border border-gold text-gold font-inter text-sm px-6 py-2 rounded-full hover:bg-gold hover:text-white transition-all duration-300">
+            <a 
+              href="/src/assets/resume.pdf" 
+              download="Resume.pdf"
+              className="border border-gold text-center text-gold font-inter text-sm px-6 py-2 rounded-full hover:bg-gold hover:text-white transition-all duration-300">
               Download Resume
-            </button>
+            </a>
           </div>
         </div>
 
-        <div className="relative flex items-center justify-center overflow-hidden bg-bg-secondary">
+       <div className="hidden md:flex relative items-center justify-center bg-bg-secondary">
           {bubbles.map((bubble, index) => (
             <div
               key={index}

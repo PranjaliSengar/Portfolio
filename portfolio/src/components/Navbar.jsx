@@ -1,5 +1,7 @@
+import { useState } from "react";
+
 function Navbar() {
-  
+  const [isOpen, setIsOpen] = useState(false);
   const navLinks = [
     {name: "Skills", href: "#skills"},
     {name: "Experience", href: "#experience"},
@@ -13,7 +15,7 @@ function Navbar() {
         Pranjali <span className="not-italic font-semibold text-sage-dark ">Sengar</span>
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="hidden md:flex items-center gap-2">
         {navLinks.map((link)=>( 
           <a 
           key={link.name} 
@@ -22,7 +24,45 @@ function Navbar() {
         ))
         }
       </div>
-      <button className="font-inter text-sm font-medium text-gold border border-gold px-6 py-2 rounded-full hover:bg-gold hover:text-white transition-all duration-300">Get in Touch</button>
+      <button 
+        onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+        className="hidden md:block font-inter text-sm font-medium text-gold border border-gold px-6 py-2 rounded-full hover:bg-gold hover:text-white transition-all duration-300">
+        Get in Touch
+      </button>
+      {/* Mobile Hamburger */}
+      <button
+        className="md:hidden text-gold text-2xl"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        ☰
+      </button>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="absolute top-full left-0 w-full bg-bg-primary backdrop-blur-md flex flex-col items-center gap-4 py-6 md:hidden">
+
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="text-text-muted text-base"
+            >
+              {link.name}
+            </a>
+          ))}
+
+          <button
+            onClick={() => {
+              document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+              setIsOpen(false);
+            }}
+            className="text-gold border border-gold px-5 py-2 rounded-full"
+          >
+            Get in Touch
+          </button>
+        </div>
+      )}    
     </nav>
   )
 }

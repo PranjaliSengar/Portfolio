@@ -19,6 +19,10 @@ function App() {
       <Projects />
        <div className="section-divider" />
       <Contact />
+      <footer className="text-center py-6 font-inter text-xs text-text-light border-t border-sage/10">
+  Crafted with Ambition by Pranjali Sengar · 2026
+</footer>
+
     </div>
   )
 }

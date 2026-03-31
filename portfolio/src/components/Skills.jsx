@@ -8,7 +8,7 @@ function Skills() {
 
   return (
     
-    <section className="pt-12 pb-16 px-10 bg-bg-primary" id="skills">
+    <section className="py-8 md:py-10 lg:py-12 px-6 md:px-10 bg-bg-primary" id="skills">
 
       <div className="max-w-5xl mx-auto">
         <p className="font-inter text-xs text-sage tracking-widest uppercase mb-3">

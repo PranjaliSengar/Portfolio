@@ -10,7 +10,7 @@ function Experience() {
         `Built the Contribution module from scratch, covering employer/employee percentage splits, recurring payments, and one-off contributions, replaced repetitive conditional payload logic with a dynamic Map-based builder, cutting related bugs by 60%`,
         `Diagnosed and resolved a critical member shell load bottleneck, parallelized Magnolia CMS calls with REST APIs, introduced lazy-loaded feature modules and OnPush change detection, reducing initial page load by 40%`,
         `Hardened REST API integrations across pension flows, introduced optional chaining, aligned FE/BE validation schemas, and added JWT-aware error boundaries, reducing integration defects reaching QA by 45%`,
-        `Delivered the Breadcrumb component to the shared UI library, adopted across 4+ teams and iteratively enhanced 10+ components with accessibility fixes, responsive improvements, and extended functionality`,
+        `Delivered the components to the shared UI library, adopted across 4+ teams and iteratively enhanced 10+ components with accessibility fixes, responsive improvements, and extended functionality`,
       ]
     },
     {
@@ -27,7 +27,7 @@ function Experience() {
   ]
 
   return (
-    <section className="pt-12 pb-16 px-10 bg-bg-primary" id="experience">
+    <section className="py-8 md:py-10 lg:py-10 px-6 md:px-10 bg-bg-primary" id="experience">
       <div className="max-w-5xl mx-auto">
 
         <p className="font-inter text-xs text-sage tracking-widest uppercase mb-3">
