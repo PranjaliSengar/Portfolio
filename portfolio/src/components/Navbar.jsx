@@ -11,7 +11,9 @@ function Navbar() {
     return (
     <nav className="flex justify-between items-center px-10 py-3 sticky top-0 z-50 border-b backdrop-blur-md bg-bg-primary/50">
 
-      <div className="font-playfair font-semibold text-gold text-lg italic">
+      <div 
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="font-playfair font-semibold text-gold text-lg italic hover:cursor-pointer" id="hero">
         Pranjali <span className="not-italic font-semibold text-sage-dark ">Sengar</span>
       </div>
 

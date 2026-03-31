@@ -15,10 +15,10 @@ function Hero() {
   const[wordIndex, setWordIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
   const words = [
-      'Frontend with depth — not just visuals.',
-  'Handling state, APIs, and complex flows.',
-  'Clean interfaces, strong foundations.',
-  'Built for scale, performance, and clarity.',
+    'Frontend with depth, not just visuals.',
+    'Handling state, APIs, and complex flows.',
+    'Clean interfaces, strong foundations.',
+    'Built for scale, performance, and clarity.',
   ]
   useEffect(() => {
     const glow = document.getElementById('cursor-glow')
@@ -90,9 +90,9 @@ function Hero() {
             <button className="bg-sage-dark text-white font-inter text-sm px-6 py-2 rounded-full hover:bg-sage transition-all duration-300" onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}>
               See Projects
             </button>
-            <a 
-              href="/src/assets/resume.pdf" 
-              download="Resume.pdf"
+            <a
+              href="/resume.pdf" 
+              download="resume.pdf" 
               className="border border-gold text-center text-gold font-inter text-sm px-6 py-2 rounded-full hover:bg-gold hover:text-white transition-all duration-300">
               Download Resume
             </a>
