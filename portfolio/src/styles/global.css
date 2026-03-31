@@ -46,7 +46,7 @@
   transform: translateY(-4px);
   box-shadow: 0 10px 36px rgba(122, 158, 135, 0.14);
 }
-    .card-glow {
+.card-glow {
   position: relative;
   overflow: hidden;
 }
@@ -57,6 +57,7 @@
   inset: 0;
   border-radius: 16px;
   padding: 1px;
+  z-index: 0;
   background: linear-gradient(
     135deg,
     rgba(122, 158, 135, 0),
@@ -79,4 +80,15 @@
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(122, 158, 135, 0.3), transparent);
   margin: 0 40px;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.card-glow > * {
+  position: relative;
+  z-index: 1;
 }
