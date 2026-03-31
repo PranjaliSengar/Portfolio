@@ -30,3 +30,53 @@
 .bubble-slow   { animation: float-slow 6s ease-in-out infinite; }
 .bubble-medium { animation: float-medium 4s ease-in-out infinite; }
 .bubble-fast   { animation: float-fast 3s ease-in-out infinite; }
+
+.card {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(122, 158, 135, 0.18);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(122, 158, 135, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 36px rgba(122, 158, 135, 0.14);
+}
+    .card-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(122, 158, 135, 0),
+    rgba(122, 158, 135, 0.5),
+    rgba(184, 151, 90, 0.3),
+    rgba(122, 158, 135, 0)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card-glow:hover::before {
+  opacity: 1;
+}
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(122, 158, 135, 0.3), transparent);
+  margin: 0 40px;
+}

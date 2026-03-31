@@ -56,7 +56,7 @@ function Hero() {
   return (
     <>
       <div id="cursor-glow" className="cursor-glow" />
-      <section className="grid grid-cols-2 min-h-screen">
+      <section className="grid grid-cols-2 h-screen">
         <div className="flex flex-col pt-20 min-h-screen px-14 gap-4 bg-bg-primary">
           <p className="font-inter text-xs text-sage tracking-widest uppercase">
             — Based in Bangalore, India —
