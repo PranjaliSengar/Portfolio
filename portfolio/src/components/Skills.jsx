@@ -1,15 +1,63 @@
 function Skills() {
   const skills = [
-    { name: 'Frontend', subSkills: ['Angular', 'React', 'RxJS', 'NgRx', 'Redux', 'Context API', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3/SCSS'] },
-    { name: 'Architecture', subSkills: ['Component-Driven Architecture', 'Lazy Loading', 'OnPush Change Detection', 'Feature-Based Modular Structure', 'Code Splitting', 'Performance Optimization'] },
-    { name: 'API Integration', subSkills: ['RESTful APIs', 'Authentication & Authorization', 'Axios', 'Angular HttpClient', 'Reactive Forms', 'Schema Validation'] },
-    { name: 'Tools & Platforms', subSkills: ['Git', 'GitHub', 'Jira', 'Webpack', 'Vite', 'NPM', 'AWS (S3, CloudFront)', 'Web Accessibility (WCAG)', 'Debugging'] },
-  ]
+    {
+      name: "Frontend",
+      subSkills: [
+        "Angular",
+        "React",
+        "RxJS",
+        "NgRx",
+        "Redux",
+        "Context API",
+        "TypeScript",
+        "JavaScript (ES6+)",
+        "HTML5",
+        "CSS3/SCSS",
+      ],
+    },
+    {
+      name: "Architecture",
+      subSkills: [
+        "Component-Driven Architecture",
+        "Lazy Loading",
+        "OnPush Change Detection",
+        "Feature-Based Modular Structure",
+        "Code Splitting",
+        "Performance Optimization",
+      ],
+    },
+    {
+      name: "API Integration",
+      subSkills: [
+        "RESTful APIs",
+        "Authentication & Authorization",
+        "Axios",
+        "Angular HttpClient",
+        "Reactive Forms",
+        "Schema Validation",
+      ],
+    },
+    {
+      name: "Tools & Platforms",
+      subSkills: [
+        "Git",
+        "GitHub",
+        "Jira",
+        "Webpack",
+        "Vite",
+        "NPM",
+        "AWS (S3, CloudFront)",
+        "Web Accessibility (WCAG)",
+        "Debugging",
+      ],
+    },
+  ];
 
   return (
-    
-    <section className="py-8 md:py-10 lg:py-12 px-6 md:px-10 bg-bg-primary" id="skills">
-
+    <section
+      className="py-8 md:py-10 lg:py-12 px-6 md:px-10 bg-bg-primary"
+      id="skills"
+    >
       <div className="max-w-5xl mx-auto">
         <p className="font-inter text-xs text-sage tracking-widest uppercase mb-3">
           Skills
@@ -38,9 +86,8 @@ function Skills() {
           ))}
         </div>
       </div>
-
     </section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;

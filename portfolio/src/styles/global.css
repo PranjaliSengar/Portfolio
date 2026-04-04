@@ -1,19 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @keyframes float-slow {
-  0%   { transform: translateY(0px) scale(1); }
-  50%  { transform: translateY(-20px) scale(1.05); }
-  100% { transform: translateY(0px) scale(1); }
+  0% {
+    transform: translateY(5px) scale(1);
+  }
+  50% {
+    transform: translateY(-25px) scale(1.05);
+  }
+  100% {
+    transform: translateY(5px) scale(1);
+  }
 }
 
 @keyframes float-medium {
-  0%   { transform: translateY(0px) scale(1); }
-  50%  { transform: translateY(-14px) scale(1.03); }
-  100% { transform: translateY(0px) scale(1); }
+  0% {
+    transform: translateY(5px) scale(1);
+  }
+  50% {
+    transform: translateY(-24px) scale(1.03);
+  }
+  100% {
+    transform: translateY(5px) scale(1);
+  }
+}
+
+@keyframes float-fast {
+  0% {
+    transform: translateY(5px) scale(1);
+  }
+  50% {
+    transform: translateY(-24px) scale(1.2);
+  }
+  100% {
+    transform: translateY(5px) scale(1);
+  }
 }
 
 .cursor-glow {
@@ -23,13 +47,25 @@
   border-radius: 50%;
   pointer-events: none;
   z-index: 999;
-  background: radial-gradient(circle, rgba(47, 57, 67, 0.1) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(47, 57, 67, 0.1) 0%,
+    transparent 70%
+  );
   transform: translate(-50%, -50%);
-  transition: left 0.08s linear, top 0.08s linear;
+  transition:
+    left 0.08s linear,
+    top 0.08s linear;
 }
-.bubble-slow   { animation: float-slow 6s ease-in-out infinite; }
-.bubble-medium { animation: float-medium 4s ease-in-out infinite; }
-.bubble-fast   { animation: float-fast 3s ease-in-out infinite; }
+.bubble-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+.bubble-medium {
+  animation: float-medium 4s ease-in-out infinite;
+}
+.bubble-fast {
+  animation: float-fast 4s ease-in-out infinite;
+}
 
 .card {
   background: rgba(255, 255, 255, 0.65);
@@ -52,7 +88,7 @@
 }
 
 .card-glow::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 16px;
@@ -65,8 +101,12 @@
     rgba(184, 151, 90, 0.3),
     rgba(122, 158, 135, 0)
   );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
@@ -78,7 +118,12 @@
 }
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(122, 158, 135, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(122, 158, 135, 0.3),
+    transparent
+  );
   margin: 0 40px;
 }
 .scrollbar-hide::-webkit-scrollbar {
