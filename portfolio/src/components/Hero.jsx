@@ -63,10 +63,10 @@ function Hero() {
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const words = [
-    "Frontend with depth, not just visuals.",
-    "Handling state, APIs, and complex flows.",
-    "Clean interfaces, strong foundations.",
-    "Built for scale, performance, and clarity.",
+    "Building scalable, high-performance UI systems.",
+    "Handling complex state, APIs, and user flows.",
+    "Focused on performance, reusability, and clarity.",
+    "Crafting production-grade frontend architectures.",
   ];
   useEffect(() => {
     const glow = document.getElementById("cursor-glow");
@@ -121,9 +121,9 @@ function Hero() {
           </h1>
 
           <div className="flex items-center gap-3 font-inter text-xs md:text-sm text-text-muted">
-            <span>Frontend Developer</span>
+            <span>Frontend Engineer</span>
             <span className="w-1 h-1 rounded-full bg-gold" />
-            <span>Angular Specialist</span>
+            <span>Angular Developer</span>
             <span className="w-1 h-1 rounded-full bg-gold" />
             <span>React Developer</span>
           </div>
@@ -132,10 +132,11 @@ function Hero() {
             <span className="animate-pulse">|</span>
           </p>
           <p className="font-inter text-xs md:text-sm text-text-muted leading-relaxed max-w-md">
-            Frontend developer with 2+ years of experience crafting clean,
-            scalable interfaces in Banking & FinTech at TCS. I care about the
-            craft, not just making things work, but making them feel right.
-            Looking to contribute to impactful, user-focused products.
+            Frontend Engineer with experience building scalable,
+            high-performance applications in the Banking & FinTech domain.
+            Skilled in Angular, React, and state management, with a focus on
+            performance optimization, reusability, and delivering reliable
+            production-grade systems.
           </p>
 
           <div className="flex items-center gap-2 w-fit px-3 py-1.5 md:px-4 md:py-2  rounded-full border border-sage/30 bg-sage/10 font-inter text-xs text-sage-dark">

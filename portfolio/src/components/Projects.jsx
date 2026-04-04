@@ -9,9 +9,8 @@ function Projects() {
   };
   const projects = [
     {
-      name: "EmpowerLocal",
-      description:
-        "A platform connecting local skilled workers- electricians, plumbers, carpenters etc, with people who need them. Built to solve a real underserved market gap.",
+      name: "EmpowerLocal- Hyperlocal Service Marketplace",
+      description: `Built a hyperlocal service marketplace with proximity-based worker discovery using geolocation APIs and real-time availability handling. Designed an AI-powered intake flow to classify user requests and enable faster service matching.`,
       tech: ["Angular", "RxJS", "NgRx", "OpenAI", "SCSS"],
       github: "https://github.com/your-username/empowerlocal",
       live: null,
@@ -20,8 +19,7 @@ function Projects() {
     },
     {
       name: "Portfolio Website",
-      description:
-        "My personal portfolio, designed and built from scratch using React, Tailwind CSS and Framer Motion. Featuring a typewriter effect, cursor glow, floating bubbles and smooth animations.",
+      description: `"Designed and developed a responsive portfolio using React, Tailwind CSS, and Framer Motion, featuring dynamic UI elements like typewriter text, cursor interactions, and animated components."`,
       tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
       github: "https://github.com/PranjaliSengar/Portfolio",
       live: "https://pranjali-sengar.vercel.app",
@@ -31,7 +29,7 @@ function Projects() {
     {
       name: "Many more coming soon!",
       description: "",
-      tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+      tech: ["NextJS", "NLP", "LLM APIs", "Accessibility (WCAG)", "Javascript", "MongoDB"],
       github: "https://github.com/your-username/portfolio",
       live: null,
       status: "Soon",
@@ -49,7 +47,7 @@ function Projects() {
           Projects
         </p>
         <h2 className="font-playfair text-3xl md:text-4xl font-normal mb-8 md:mb-12">
-          Things I've <span className="italic text-sage-dark">built</span>
+          Featured <span className="italic text-sage-dark">Projects</span>
         </h2>
 
         <div className="relative">
@@ -69,7 +67,7 @@ function Projects() {
             {projects.map((project) => (
               <div
                 key={project.name}
-                className="card card-glow snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[420px] flex flex-col"
+                className="card card-glow snap-start flex-shrink-0 w-[320px] sm:w-[380px] md:w-[500px] flex flex-col"
               >
                 {/* image area */}
                 <div className="w-full h-48 rounded-xl mb-4 overflow-hidden bg-bg-secondary flex items-center justify-center relative">
@@ -87,7 +85,7 @@ function Projects() {
                       </span>
                     </div>
                   )}
-                  <span className="hidden md:block absolute top-3 right-3 font-inter text-xs px-3 py-1 rounded-full bg-gold/10 text-gold border border-gold/20">
+                  <span className="hidden md:block absolute top-3 right-3 font-inter text-xs px-3 py-1 rounded-full bg-gold/20 text-gold border border-gold/40 font-semibold">
                     {project.status}
                   </span>
                 </div>
